@@ -1,8 +1,11 @@
+
+import { Header } from "./components/Header"
+
 function App() {
 
   return (
     <>
-      <h1 className="bg-error">Deus é amor, mas também é fogo consumidor</h1>
+      <Header />
     </>
   )
 }
