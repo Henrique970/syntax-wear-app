@@ -8,7 +8,7 @@ export const Hero = () => {
                 <img
                     src={Banner}
                     alt="Homem sentados com os tênis da Syntaxwear"
-                    className="w-full object-cover rounded-[20px]" />
+                    className="w-full h-full object-cover rounded-[20px]" />
 
                 <div className="absolute w-full bottom-0 flex justify-end items-center text-center px-6 md:px-24 pb-32">
                     <div className="flex flex-col  items-center text-white w-97">
@@ -17,7 +17,7 @@ export const Hero = () => {
 
                         <div className="flex gap-3.5">
 
-                            <Button variant="secundary" size="sm">
+                            <Button variant="secondary" size="sm">
                                 Ver modelos
                             </Button>
 
