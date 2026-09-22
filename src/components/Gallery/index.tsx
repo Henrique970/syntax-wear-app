@@ -8,6 +8,7 @@ import galeriaTenisColorido from "@/assets/images/galeria-tenis-colorido.jpg"
 import galeriaTenisBrancoPreto from "@/assets/images/galeria-tenis-branco-e-preto.jpg"
 import galeriaTenisCinza from "@/assets/images/galeria-tenis-cinza.jpg"
 import { Button } from "../Button"
+import { Overlay } from "../Overlay"
 
 export const Gallery = () => {
     return (
@@ -20,15 +21,14 @@ export const Gallery = () => {
                 {/* `size-full` preenche o bloco; `object-cover` evita distorção da imagem. */}
                 <img src={galeriaHomem} alt="Modelo masculino usando tênis SyntaxWear" className="size-full object-cover" />
 
-                {/* A sobreposição fica sempre visível no mobile e aparece no hover em telas maiores. */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/20 text-center text-white opacity-100 transition-opacity duration-200 md:opacity-0 md:group-hover:opacity-100">
-                    <p className="mb-1 text-lg">Krypton One</p>
-                    <p className="mb-4 text-2xl">Estilo urbano com atitude</p>
-                    <div className="flex gap-2">
-                        <Button variant="secondary" size="sm">Feminino</Button>
-                        <Button variant="secondary" size="sm">Masculino</Button>
-                    </div>
-                </div>
+                {/* Overlay */}
+                <Overlay 
+                tittle="Krypton One" 
+                subtittle="Estilo hurbano com atitude" 
+                ownClassName="inset-0 justify-center">
+                    <Button variant="secondary">Feminino</Button>
+                    <Button variant="secondary">Masculino</Button>
+                </Overlay>
             </div>
 
             {/* O nome em `grid-area` precisa corresponder a um nome usado no template acima. */}
