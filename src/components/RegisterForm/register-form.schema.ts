@@ -63,7 +63,7 @@ export const registerUserFormSchema = z.object({
 // Tipo TypeScript inferido automaticamente
 export type RegisterFormData = z.infer<typeof registerUserFormSchema>;
 
-export const RegisterForm = () => {
+export const useRegisterForm = () => {
     const {
         register,
         handleSubmit,
