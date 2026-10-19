@@ -76,7 +76,13 @@ export const useRegisterForm = () => {
         // Valores padrão para os formulários
         defaultValues: {
             email: "",
-            password: ""
+            password: "",
+            confirmPassword: "",
+            firstName: "",
+            lastName: "",
+            cpf: "",
+            birthDate: "",
+            cellphone: ""
         },
         criteriaMode: "all"
     });
