@@ -10,7 +10,7 @@ export const ProductCard = ({ product }: ProductCarProps) => {
     return (
         <>
             <div className="bg-white rounded-2xl shadow-md">
-                <Link to="/products">
+                <Link to="/products/$productId" params={{ productId: String(product.id) }}>
                     <img src={product.image} alt={product.name}
                         className="w-full max-h-100 object-cover rounded-md mb-2" />
                 </Link>
