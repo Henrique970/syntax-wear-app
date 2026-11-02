@@ -29,39 +29,41 @@ function RouteComponent() {
 
             <div className='flex justify-center gap-10'>
                 <img src={filterProduct?.image} alt={filterProduct?.name} className='w-125 bg-white rounded-2xl' />
-            </div>
 
-            <div>
-                <h1 className='text-4xl font-bold mb-1'>{filterProduct?.name}</h1>
 
-                <p>Cor: {filterProduct?.color}</p>
+                <div>
+                    <h1 className='text-4xl font-bold mb-1'>{filterProduct?.name}</h1>
 
-                <p className='line-through text-sm text-[#878787]'>
-                    {formatCurrency(originalPrice)}
-                </p>
+                    <p>Cor: {filterProduct?.color}</p>
 
-                <p className='text-3xl font-bold mb-2'>{formatCurrency(discountPrice)} no PIX</p>
+                    <p className='line-through text-sm text-[#878787]'>
+                        {formatCurrency(originalPrice)}
+                    </p>
 
-                <p className='text-sm text-[#878787]'>Você economiza: <span className='font-semibold'>10%</span></p>
+                    <p className='text-3xl font-bold mb-2'>{formatCurrency(discountPrice)} no PIX</p>
 
-                <p className='mb-2'>ou <span className='font-semibold'>6x</span> de{" "}<span className='font-semibold'>{formatCurrency(inInstallmentsPrice)}</span> </p>
+                    <p className='text-sm text-[#878787]'>Você economiza: <span className='font-semibold'>10%</span></p>
 
-                <p className='max-w-125 my-5'>{filterProduct?.description}</p>
+                    <p className='mb-2'>ou <span className='font-semibold'>6x</span> de{" "}<span className='font-semibold'>{formatCurrency(inInstallmentsPrice)}</span> </p>
 
-                <div className='mb-6'>
-                    <p className='text-sm'>Calcular o prazo de entrega</p>
+                    <p className='max-w-125 my-5'>{filterProduct?.description}</p>
 
-                    <form className='flex gap-3'>
-                        <input type="text" placeholder="Insira seu CEP"
-                            className='border border-[#c0c0c0c0] rounded-md p-3' />
+                    <div className='mb-6'>
+                        <p className='text-sm'>Calcular o prazo de entrega</p>
 
-                        <button className='bg-black text-white py-3 px-6 rounded-md cursor-pointer hover:bg-gray-900'>
-                            Calcular
-                        </button>
-                    </form>
+                        <form className='flex gap-3'>
+                            <input type="text" placeholder="Insira seu CEP"
+                                className='border border-[#c0c0c0c0] rounded-md p-3' />
+
+                            <button className='bg-black text-white py-3 px-6 rounded-md cursor-pointer hover:bg-gray-900'>
+                                Calcular
+                            </button>
+                        </form>
+                    </div>
+
+
+                    <button className='bg-black text-white w-full p-5 text-center rounded-md hover:bg-gray-900'>Adicionar ao Carrinho</button>
                 </div>
-
-                <button className='bg-black text-white w-full p-5 text-center rounded-md hover:bg-gray-900'>Adicionar ao Carrinho</button>
             </div>
 
 

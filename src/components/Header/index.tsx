@@ -1,8 +1,8 @@
 import Logo from '@/assets/images/logo.png'
 import IconUser from '@/assets/images/icons/icon-user.png'
 import IconAbout from '@/assets/images/icons/icon-about.png'
-import IconCart from '@/assets/images/icons/icon-cart.png'
 import { Link } from '@tanstack/react-router'
+import { ShoppingCart } from '../ShoppingCart'
 
 
 export const Header = () => {
@@ -38,7 +38,7 @@ export const Header = () => {
                                 </Link>
                             </li>
                             <li><a href="#"><img src={IconAbout} alt="Ícone de sobre" /></a></li>
-                            <li><a href="#"><img src={IconCart} alt="Ícone de carrinho" /></a></li>
+                            <li><ShoppingCart /></li>
                         </ul>
                     </nav>
                 </div>
