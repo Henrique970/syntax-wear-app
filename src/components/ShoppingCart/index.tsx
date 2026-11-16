@@ -1,6 +1,5 @@
 import IconCard from "@/assets/images/icons/icon-cart.png"
 import { useState } from "react"
-import { products } from "../../mocks/products"
 
 import MensTreeDasher from '@/assets/images/tree-dasher-2-natural-black-boyal-blue.webp'
 import MensTreeRunnerNz from '@/assets/images/tree-runner-nz-weathered-brown.webp'
@@ -32,11 +31,15 @@ export const ShoppingCart = () => {
                 <img src={IconCard} alt="Ícone carrinho de compras" />
             </button>
 
-            <div className={`${cartIsOpen ? "w-full bg-black/70" : "w-0"} fixed top-0 bottom-0 left-0`} onClick={() => setCartIsOpen(!cartIsOpen)}>
+            {/* Overlay */}
+            <div className={`${cartIsOpen ? "w-full bg-black/70 visible" : "bg-transparent invisible"} fixed top-0 bottom-0 left-0 right-0`} onClick={() => setCartIsOpen(!cartIsOpen)}>
 
-                <div className={`${cartIsOpen ? "w-75 md:w-106" : "w-0"} absolute top-0 bottom-0 right-0 bg-white pt-6 transition-all duration-500 ease-in-out`} onClick={(e) => e.stopPropagation()}>
+                {/* Drawer */}
+                <div className={`${cartIsOpen ? "translate-x-0" : "translate-x-full"} absolute top-0 bottom-0 right-0 bg-white pt-6 transition-all duration-500 ease-in-out w-75 md:w-106`} onClick={(e) => e.stopPropagation()}>
                     <header className="flex items-center justify-between px-5">
-                        <p className="text-2xl font-bold">Carrinho (0)</p>
+                        <p className="text-2xl font-bold">
+                            Carrinho ({productsInCart.length})
+                        </p>
                         <button className="text-xl cursor-pointer" onClick={() => setCartIsOpen(!cartIsOpen)}>
                             X
                         </button>
